@@ -16,7 +16,7 @@ export function Header() {
               alt="Touchwood Logo" 
               width={40} 
               height={40}
-              className="w-8 h-8 sm:w-10 sm:h-10"
+              className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
             />
             <span className='text-white text-lg sm:text-xl font-semibold'>
               Touchwood
