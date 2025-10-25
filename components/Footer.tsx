@@ -13,7 +13,32 @@ export function Footer() {
     const body = 'Hello,\n\nI am interested in your furniture products. Please provide more information.\n\nThank you!';
     
     const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink, '_self');
+    
+    try {
+      // Create anchor element and click it (most reliable method)
+      const tempAnchor = document.createElement('a');
+      tempAnchor.href = mailtoLink;
+      tempAnchor.style.display = 'none';
+      document.body.appendChild(tempAnchor);
+      tempAnchor.click();
+      setTimeout(() => document.body.removeChild(tempAnchor), 100);
+    } catch (error) {
+      // Fallback methods
+      try {
+        window.location.href = mailtoLink;
+      } catch (error2) {
+        try {
+          window.location.assign(mailtoLink);
+        } catch (error3) {
+          // Final fallback - copy email to clipboard
+          navigator.clipboard.writeText(email).then(() => {
+            alert(`Email copied to clipboard: ${email}`);
+          }).catch(() => {
+            alert(`Please email us at: ${email}`);
+          });
+        }
+      }
+    }
   };
 
   const handleMapClick = () => {
