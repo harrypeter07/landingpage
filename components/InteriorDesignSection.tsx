@@ -43,7 +43,7 @@ export function InteriorDesignSection() {
             {/* Second + third stacked images */}
             <div className="space-y-[1vw] pt-[2vw] relative">
               {/* Second grid image */}
-              <div className="relative aspect-square rounded-xl overflow-hidden w-[10vw] sm:w-[22vw] md:w-[16vw] lg:w-[14vw] mx-auto lg:mr-[-5vw]">
+              <div className="relative aspect-square rounded-xl overflow-hidden w-[10vw] sm:w-[42vw] md:w-[16vw] lg:w-[14vw] mx-auto lg:mr-[-5vw]">
                 <Image
                   src="/gridsection/img-grid-2 1.png"
                   alt="Interior 2"
@@ -58,7 +58,7 @@ export function InteriorDesignSection() {
                   absolute 
                   right-[-1vw] 
                   bottom-[-5vw] 
-                  sm:right-[-2vw] 
+                  sm:right-[28vw] 
                   sm:bottom-[-6vw] 
                   md:right-[3vw] 
                   md:bottom-[3vw] 
@@ -113,8 +113,14 @@ export function InteriorDesignSection() {
             Explore
           </Button>
 
-          {/* Sofa image */}
-          <div className="absolute bottom-[-10vw] right-[-5vw] w-[25vw] h-[25vw] z-[100]">
+          {/* Sofa image - Responsive positioning */}
+          <div className="absolute 
+            bottom-[-20vw] right-[1vw] w-[30vw] h-[30vw] 
+            sm:bottom-[-90vw] sm:right-[-1vw] sm:w-[32vw] sm:h-[32vw]
+            md:bottom-[-30vw] md:right-[3vw] md:w-[35vw] md:h-[35vw]
+            lg:bottom-[-35vw] lg:right-[2vw] lg:w-[35vw] lg:h-[35vw]
+            xl:bottom-[-35vw] xl:right-[1vw] xl:w-[35vw] xl:h-[35vw]
+            z-[100]">
             <Image
               src="/gridsection/sofa 1.png"
               alt="Sofa"
