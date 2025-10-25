@@ -3,44 +3,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
-  const handlePhoneClick = (phoneNumber: string) => {
-    window.open(`tel:${phoneNumber}`, '_self');
-  };
-
-  const handleEmailClick = () => {
-    const email = 'info@touchwoodfurnitures.com';
-    const subject = 'Inquiry about Touchwood Furnitures';
-    const body = 'Hello,\n\nI am interested in your furniture products. Please provide more information.\n\nThank you!';
-    
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    try {
-      // Create anchor element and click it (most reliable method)
-      const tempAnchor = document.createElement('a');
-      tempAnchor.href = mailtoLink;
-      tempAnchor.style.display = 'none';
-      document.body.appendChild(tempAnchor);
-      tempAnchor.click();
-      setTimeout(() => document.body.removeChild(tempAnchor), 100);
-    } catch (error) {
-      // Fallback methods
-      try {
-        window.location.href = mailtoLink;
-      } catch (error2) {
-        try {
-          window.location.assign(mailtoLink);
-        } catch (error3) {
-          // Final fallback - copy email to clipboard
-          navigator.clipboard.writeText(email).then(() => {
-            alert(`Email copied to clipboard: ${email}`);
-          }).catch(() => {
-            alert(`Please email us at: ${email}`);
-          });
-        }
-      }
-    }
-  };
-
   const handleMapClick = () => {
     const address = 'Touchwood Furnitures, Paradsinga, Nagpur - 440016, Maharashtra, India';
     const encodedAddress = encodeURIComponent(address);
@@ -51,8 +13,9 @@ export function Footer() {
   return (
     <footer className='bg-slate-100 mx-8 mb-8 rounded-3xl py-6 sm:py-8 border-t border-slate-200'>
       <div className='container mx-auto px-4 sm:px-6'>
-        {/* Contact Information */}
         <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6 text-xs sm:text-sm text-gray-700 mb-6'>
+          
+          {/* Address */}
           <div 
             className='flex items-start gap-2 w-full lg:w-auto cursor-pointer hover:text-blue-600 transition-colors'
             onClick={handleMapClick}
@@ -67,46 +30,45 @@ export function Footer() {
             </div>
           </div>
 
+          {/* Phone */}
           <div className='flex items-start gap-2 w-full lg:w-auto'>
             <Phone className='w-4 h-4 text-gray-600 mt-0.5 flex-shrink-0' />
             <div className='flex flex-wrap gap-1'>
               <span className='font-medium'>Phone:</span>
               <div className='flex flex-wrap gap-2'>
-                <span 
+                <a 
+                  href="tel:+91987654321"
                   className='break-words cursor-pointer hover:text-blue-600 hover:underline transition-colors'
-                  onClick={() => handlePhoneClick('+91987654321')}
-                  title="Click to call"
                 >
                   +91 987654321
-                </span>
+                </a>
                 <span className='text-gray-400'>|</span>
-                <span 
+                <a 
+                  href="tel:+91123456789"
                   className='break-words cursor-pointer hover:text-blue-600 hover:underline transition-colors'
-                  onClick={() => handlePhoneClick('+91123456789')}
-                  title="Click to call"
                 >
                   +91 123456789
-                </span>
+                </a>
               </div>
             </div>
           </div>
 
-          <div 
-            className='flex items-start gap-2 w-full lg:w-auto cursor-pointer hover:text-blue-600 transition-colors'
-            onClick={handleEmailClick}
-            title="Click to send email"
-          >
+          {/* Email */}
+          <div className='flex items-start gap-2 w-full lg:w-auto'>
             <Mail className='w-4 h-4 text-gray-600 mt-0.5 flex-shrink-0' />
             <div className='flex flex-wrap gap-1'>
               <span className='font-medium'>Email:</span>
-              <span className='break-words hover:underline'>
+               <a
+                 href="mailto:info@touchwoodfurnitures.com?subject=Inquiry%20about%20Touchwood%20Furnitures"
+                 target="_blank"
+                 className='break-words hover:underline cursor-pointer hover:text-blue-600 transition-colors'
+               >
                 info@touchwoodfurnitures.com
-              </span>
+              </a>
             </div>
           </div>
+
         </div>
-
-
       </div>
     </footer>
   );
