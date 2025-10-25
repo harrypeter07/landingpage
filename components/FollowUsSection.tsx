@@ -96,8 +96,8 @@ export function FollowUsSection() {
           </p>
         </div>
 
-        {/* Video Grid - Two rows with no gaps, with little padding */}
-        <div className="grid grid-cols-5 gap-0 w-full px-2 sm:px-3 md:px-4">
+        {/* Video Grid - Responsive columns with little padding */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-0 w-full px-2 sm:px-3 md:px-4">
           {instagramReels.map((reel, index) => (
             <div
               key={reel.id}
@@ -118,9 +118,7 @@ export function FollowUsSection() {
                 
                 {/* Play Button */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-110 transition-all duration-300 shadow-lg">
-                    <Play className="w-6 h-6 sm:w-8 sm:h-8 text-gray-800 ml-1" fill="currentColor" />
-                  </div>
+                  <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-lg group-hover:scale-110 transition-all duration-300" fill="currentColor" />
                 </div>
 
                 {/* Video number badge */}
@@ -140,7 +138,7 @@ export function FollowUsSection() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-6 sm:mt-8 px-4 sm:px-6">
+        <div className="text-center mt-24 sm:mt-24 px-4 sm:px-6">
         
           <button
             onClick={() => window.open('https://www.instagram.com/touchwood_furnitures', '_blank')}
