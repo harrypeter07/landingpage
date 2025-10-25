@@ -26,7 +26,8 @@ export function Footer() {
   return (
     <footer className='bg-slate-100 mx-8 mb-8 rounded-3xl py-6 sm:py-8 border-t border-slate-200'>
       <div className='container mx-auto px-4 sm:px-6'>
-        <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6 text-xs sm:text-sm text-gray-700'>
+        {/* Contact Information */}
+        <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6 text-xs sm:text-sm text-gray-700 mb-6'>
           <div 
             className='flex items-start gap-2 w-full lg:w-auto cursor-pointer hover:text-blue-600 transition-colors'
             onClick={handleMapClick}
@@ -79,6 +80,8 @@ export function Footer() {
             </div>
           </div>
         </div>
+
+
       </div>
     </footer>
   );

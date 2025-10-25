@@ -22,17 +22,25 @@ export default function Home() {
   return (
     <div className="krona-one-regular min-h-screen">
       <Header />
-      <HeroSection />
-      <FeaturedCollections 
-        activeCategory={selectedCategory} 
-        onCategoryChange={handleCategoryChange} 
-      />
-      <ProductSection selectedCategory={selectedCategory} />
+      <section id="home">
+        <HeroSection />
+      </section>
+      <section id="products">
+        <FeaturedCollections 
+          activeCategory={selectedCategory} 
+          onCategoryChange={handleCategoryChange} 
+        />
+        <ProductSection selectedCategory={selectedCategory} />
+      </section>
       <PromotionBanner />
-      <InteriorDesignSection />
-      <TestimonialsSection />
-      <FollowUsSection />
-      <ContactSection />
+      <section id="about">
+        <InteriorDesignSection />
+        <TestimonialsSection />
+        <FollowUsSection />
+      </section>
+      <section id="contact">
+        <ContactSection />
+      </section>
       <Footer />
     </div>
   )
