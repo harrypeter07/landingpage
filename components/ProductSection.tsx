@@ -70,9 +70,7 @@ export function ProductSection({ selectedCategory }: ProductSectionProps) {
     featured?: boolean;
   }) => (
     <Card
-      className={`overflow-hidden group hover:shadow-xl transition-all duration-300 ${
-        featured ? "border-2 border-blue-500" : ""
-      }`}
+      className="overflow-hidden group hover:shadow-xl hover:border-2 hover:border-blue-500 transition-all duration-300"
     >
       <div
         className='aspect-square bg-gray-100 relative overflow-hidden'
@@ -108,7 +106,7 @@ export function ProductSection({ selectedCategory }: ProductSectionProps) {
 
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-12 sm:mb-16 lg:mb-20'>
           {popularProducts.map((product, index) => (
-            <ProductCard key={index} product={product} featured={index === 1} />
+            <ProductCard key={index} product={product} />
           ))}
         </div>
 

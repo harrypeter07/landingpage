@@ -5,51 +5,112 @@ import Image from "next/image";
 export function TestimonialsSection() {
   const testimonials = [
     {
-      type: "profile",
-      name: "Frame 14",
-      position: "Customer",
-      image: "#E5E7EB",
-      rating: 0,
-    },
-    {
-      type: "profile",
-      name: "Frame 15",
-      position: "Customer",
-      image: "#F3F4F6",
-      rating: 0,
-    },
-    {
-      type: "testimonial",
-      name: "Simon Agaul",
-      position: "Customer",
-      image: "#374151",
+      id: 1,
+      name: "Carolyn Millena",
+      position: "Interior Designer",
+      image: "/Instagram story - 1.png",
       rating: 5,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut enim ad minim veniam.",
+      text: "The furniture quality exceeded my expectations. Perfect for our modern home!",
+      isCenter: false,
+      size: "small",
+      layer: 3,
     },
     {
-      type: "featured",
-      name: "James Brown",
-      position: "Customer",
-      image: "#3B82F6",
+      id: 2,
+      name: "Simon Árpád",
+      position: "Home Owner",
+      image: "/Instagram story - 2.png",
       rating: 5,
-      text: "I barely digest texts on such small interfaces, but this time was really different. Great job!",
-      quote: true,
+      text: "Excellent craftsmanship and beautiful design. Highly recommended!",
+      isCenter: false,
+      size: "medium",
+      layer: 2,
     },
     {
-      type: "profile",
+      id: 3,
+      name: "Anthony Behringer",
+      position: "Senior Research Manager",
+      image: "/Instagram story - 3.png",
+      rating: 5,
+      text: "Lorem ipsum dolor sit amet consectetur. Consequat auctor consectetur nunc vitae dolor blandit. Elit enim massa etiam neque laoreet lorem sed.",
+      isCenter: true,
+      size: "large",
+      layer: 1,
+    },
+    {
+      id: 4,
+      name: "Francis Towne",
+      position: "Architect",
+      image: "/Instagram story - 4.png",
+      rating: 5,
+      text: "Outstanding service and beautiful furniture. Made our space perfect!",
+      isCenter: false,
+      size: "medium",
+      layer: 2,
+    },
+    {
+      id: 5,
+      name: "Gleason",
+      position: "Designer",
+      image: "/Instagram story - 8.png",
+      rating: 5,
+      text: "Amazing quality and design. Love every piece we purchased!",
+      isCenter: false,
+      size: "small",
+      layer: 3,
+    },
+    {
+      id: 6,
+      name: "Stacey Prosacco",
+      position: "Customer",
+      image: "/Instagram story - 9.png",
+      rating: 5,
+      text: "Perfect furniture for our living room. Great experience!",
+      isCenter: false,
+      size: "small",
+      layer: 4,
+    },
+    {
+      id: 7,
       name: "Customer",
       position: "Happy Client",
-      image: "#1E40AF",
-      rating: 0,
-    },
-    {
-      type: "profile",
-      name: "Customer",
-      position: "Happy Client",
-      image: "#3B82F6",
+      image: "/Instagram story - 10.png",
       rating: 5,
+      text: "Beautiful furniture that transformed our home completely!",
+      isCenter: false,
+      size: "small",
+      layer: 4,
     },
   ];
+
+  const getCardStyles = (testimonial: any, index: number) => {
+    const baseStyles = "absolute bg-white rounded-lg shadow-lg transition-all duration-300";
+    const opacityStyles = {
+      1: "opacity-100",
+      2: "opacity-80",
+      3: "opacity-60",
+      4: "opacity-40"
+    };
+
+    if (testimonial.isCenter) {
+      return `${baseStyles} left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-96 z-10 ${opacityStyles[testimonial.layer]}`;
+    }
+
+    const positions = [
+      { left: "left-0", top: "top-1/2 -translate-y-1/2", size: "w-48 h-64" }, // Left small
+      { left: "left-8", top: "top-1/2 -translate-y-1/2", size: "w-56 h-72" }, // Left medium
+      { left: "left-1/2 -translate-x-1/2", top: "top-1/2 -translate-y-1/2", size: "w-80 h-96" }, // Center
+      { left: "right-8", top: "top-1/2 -translate-y-1/2", size: "w-56 h-72" }, // Right medium
+      { left: "right-0", top: "top-1/2 -translate-y-1/2", size: "w-48 h-64" }, // Right small
+      { left: "left-4", top: "top-1/2 -translate-y-1/2", size: "w-40 h-56", z: "z-0" }, // Far left
+      { left: "right-4", top: "top-1/2 -translate-y-1/2", size: "w-40 h-56", z: "z-0" }, // Far right
+    ];
+
+    const position = positions[index] || positions[0];
+    const zIndex = position.z || `z-${testimonial.layer}`;
+    
+    return `${baseStyles} ${position.left} ${position.top} ${position.size} ${zIndex} ${opacityStyles[testimonial.layer]}`;
+  };
 
   return (
     <section className='py-12 sm:py-16 lg:py-20 bg-gray-100 relative overflow-hidden'>
@@ -66,124 +127,67 @@ export function TestimonialsSection() {
         </div>
 
         <div className='relative'>
-          <div className='flex justify-center items-center perspective-1000'>
-            {/* Grid of testimonial cards with 3D perspective */}
-            <div className='relative w-full max-w-6xl h-[500px] sm:h-[600px]'>
-              {/* Back Left Card - Frame 14 */}
-              <div className='absolute left-0 top-12 w-48 sm:w-56 bg-white rounded-lg shadow-lg p-6 transform -rotate-6 scale-90 opacity-40'>
-                <div className='flex items-center gap-2 mb-4'>
-                  <div className='w-2 h-2 bg-blue-600 rounded-full'></div>
-                  <span className='text-xs text-gray-600'>Testimonial</span>
-                </div>
-                <div className='text-xs text-gray-500 mb-4 leading-relaxed'>
-                  Lorem ipsum dolor sit amet consectetur. Ut enim ad minim
-                  veniam quis nostrud exercitation ullamco laboris nisi ut
-                  aliquip ex ea commodo consequat.
-                </div>
-                <div className='mt-6'>
-                  <div className='w-20 h-20 bg-gray-200 rounded-lg mb-3'></div>
-                  <h4 className='font-semibold text-sm'>Marilyn Stone</h4>
-                  <div className='flex gap-1 mt-2'>
-                    {[...Array(5)].map((_, i) => (
-                      <div
-                        key={i}
-                        className='w-2 h-2 bg-blue-600 rounded-full'
-                      ></div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+          <div className='flex justify-center items-center'>
+            <div className='relative w-full max-w-7xl h-[600px] sm:h-[700px]'>
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={testimonial.id}
+                  className={getCardStyles(testimonial, index)}
+                >
+                  <div className='p-4 sm:p-6 h-full flex flex-col'>
+                    {/* Testimonial badge for center card */}
+                    {testimonial.isCenter && (
+                      <div className='flex items-center gap-2 mb-4'>
+                        <div className='w-2 h-2 bg-blue-600 rounded-full'></div>
+                        <span className='text-xs text-gray-600 font-medium'>Testimonial</span>
+                      </div>
+                    )}
 
-              {/* Back Left Middle Card - Frame 15 */}
-              <div className='absolute left-24 sm:left-32 top-8 w-56 sm:w-64 bg-white rounded-lg shadow-xl p-6 transform -rotate-3 scale-95 opacity-60'>
-                <div className='w-full h-48 bg-gray-800 rounded-lg mb-4 overflow-hidden'>
-                  <div className='w-full h-full bg-gradient-to-br from-gray-700 to-gray-900'></div>
-                </div>
-                <p className='text-xs text-gray-600 mb-4 leading-relaxed'>
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim velit mollit.
-                  Exercitation veniam consequat sunt nostrud amet.
-                </p>
-                <h4 className='font-semibold text-sm'>Simon Agdul</h4>
-              </div>
+                    {/* Image */}
+                    <div className='relative mb-4 flex-shrink-0'>
+                      <div className={`${testimonial.isCenter ? 'w-24 h-24' : 'w-16 h-16'} mx-auto rounded-full overflow-hidden`}>
+                        <Image
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          width={testimonial.isCenter ? 96 : 64}
+                          height={testimonial.isCenter ? 96 : 64}
+                          className='w-full h-full object-cover'
+                        />
+                      </div>
+                    </div>
 
-              {/* Center Main Card - Featured */}
-              <div className='absolute left-1/2 top-0 -translate-x-1/2 w-64 sm:w-80 bg-white rounded-lg shadow-2xl p-8 z-10 transform scale-100'>
-                <div className='flex items-center gap-2 mb-6'>
-                  <div className='w-2 h-2 bg-blue-600 rounded-full'></div>
-                  <span className='text-xs text-gray-600 font-medium'>
-                    Testimonial
-                  </span>
-                </div>
+                    {/* Rating */}
+                    <div className='flex justify-center gap-1 mb-3'>
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className={`${testimonial.isCenter ? 'w-4 h-4' : 'w-3 h-3'} text-blue-600 fill-current`}
+                          viewBox='0 0 20 20'
+                        >
+                          <path d='M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z' />
+                        </svg>
+                      ))}
+                    </div>
 
-                <div className='relative mb-6'>
-                  <div className='w-32 h-32 bg-gray-200 rounded-lg mx-auto overflow-hidden'>
-                    <div className='w-full h-full bg-gradient-to-br from-gray-300 to-gray-400'></div>
-                  </div>
-                </div>
+                    {/* Text */}
+                    <div className={`flex-1 ${testimonial.isCenter ? 'bg-blue-600 text-white rounded-lg p-4' : ''}`}>
+                      <p className={`${testimonial.isCenter ? 'text-sm' : 'text-xs'} leading-relaxed mb-3 ${testimonial.isCenter ? 'text-white' : 'text-gray-600'}`}>
+                        {testimonial.text}
+                      </p>
+                    </div>
 
-                <div className='flex justify-center gap-1 mb-6'>
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className='w-5 h-5 text-blue-600 fill-current'
-                      viewBox='0 0 20 20'
-                    >
-                      <path d='M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z' />
-                    </svg>
-                  ))}
-                </div>
-
-                <div className='bg-blue-600 text-white rounded-lg p-6 mb-6'>
-                  <p className='text-sm leading-relaxed mb-4'>
-                    Lorem ipsum dolor sit amet consectetur. Consequat auctor
-                    consectetur nunc vitae dolor blandit. Elit enim massa enim
-                    neque laoreet lorem sed.
-                  </p>
-                  <p className='text-xs font-medium'>Anthony Martingez</p>
-                </div>
-              </div>
-
-              {/* Back Right Card - Quote */}
-              <div className='absolute right-24 sm:right-32 top-16 w-56 sm:w-64 bg-white rounded-lg shadow-xl p-6 transform rotate-3 scale-95 opacity-60'>
-                <div className='text-6xl text-gray-800 font-serif mb-4'>"</div>
-                <div className='flex items-center gap-2 mb-4'>
-                  <div className='w-2 h-2 bg-blue-600 rounded-full'></div>
-                  <span className='text-xs text-gray-600'>Testimonial</span>
-                </div>
-                <p className='text-xs text-gray-600 mb-4 leading-relaxed'>
-                  Lorem ipsum dolor sit amet consectetur. Adipiscing ut eu leo
-                  tellam pino ti. Sed nulla velit imperdiet posuere vitae
-                  fringilla massa facilisis sollicitudin. Id felis imperdiet
-                  dolor nisi sit mauris.
-                </p>
-                <h4 className='font-semibold text-sm'>Franck Deniel</h4>
-              </div>
-
-              {/* Back Right Far Card */}
-              <div className='absolute right-0 top-20 w-48 sm:w-56 bg-white rounded-lg shadow-lg p-6 transform rotate-6 scale-90 opacity-40'>
-                <div className='relative mb-4'>
-                  <div className='w-full h-48 bg-blue-600 rounded-lg overflow-hidden'>
-                    <div className='absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent'>
-                      <h4 className='text-white font-semibold text-sm'>
-                        Gleason
+                    {/* Name and Position */}
+                    <div className={`${testimonial.isCenter ? 'bg-blue-600 text-white rounded-lg p-4 -mt-2' : ''}`}>
+                      <h4 className={`font-semibold ${testimonial.isCenter ? 'text-sm text-white' : 'text-xs text-gray-900'}`}>
+                        {testimonial.name}
                       </h4>
+                      <p className={`${testimonial.isCenter ? 'text-xs text-blue-100' : 'text-xs text-gray-500'}`}>
+                        {testimonial.position}
+                      </p>
                     </div>
                   </div>
                 </div>
-                <p className='text-xs text-white bg-blue-600 p-3 rounded-lg leading-relaxed mb-3'>
-                  I barely digest texts on such small interfaces, but this time
-                  was really different. Great job!
-                </p>
-                <div className='flex gap-1'>
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className='w-2 h-2 bg-blue-600 rounded-full'
-                    ></div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
