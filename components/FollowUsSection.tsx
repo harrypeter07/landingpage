@@ -96,8 +96,8 @@ export function FollowUsSection() {
           </p>
         </div>
 
-        {/* Video Grid - Two rows with no gaps, small margins */}
-        <div className="grid grid-cols-5 gap-0 w-full mx-2 sm:mx-4 md:mx-6">
+        {/* Video Grid - Two rows with no gaps, with little padding */}
+        <div className="grid grid-cols-5 gap-0 w-full px-2 sm:px-3 md:px-4">
           {instagramReels.map((reel, index) => (
             <div
               key={reel.id}
@@ -141,9 +141,7 @@ export function FollowUsSection() {
 
         {/* Call to Action */}
         <div className="text-center mt-6 sm:mt-8 px-4 sm:px-6">
-          <p className="text-gray-600 text-sm sm:text-base mb-4">
-            Follow us for daily inspiration and behind-the-scenes content
-          </p>
+        
           <button
             onClick={() => window.open('https://www.instagram.com/touchwood_furnitures', '_blank')}
             className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
