@@ -59,7 +59,7 @@ export function Footer() {
             <div className='flex flex-wrap gap-1'>
               <span className='font-medium'>Email:</span>
                <a
-                 href="mailto:info@touchwoodfurnitures.com?subject=Inquiry%20about%20Touchwood%20Furnitures"
+                 href="https://mail.google.com/mail/?view=cm&fs=1&to=info@touchwoodfurnitures.com&su=Inquiry%20about%20Touchwood%20Furnitures"
                  target="_blank"
                  className='break-words hover:underline cursor-pointer hover:text-blue-600 transition-colors'
                >
