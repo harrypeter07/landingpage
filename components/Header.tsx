@@ -10,13 +10,13 @@ export function Header() {
     <header className='fixed top-0 left-0 right-0 z-50 backdrop-blur-sm'>
       <div className='container mx-auto px-4 sm:px-6 py-3 sm:py-4'>
         <div className='flex items-center justify-between'>
-          <Link href='/' className='flex items-center gap-2 sm:gap-3'>
+          <Link href='/' className='flex items-center gap-3 sm:gap-2'>
             <Image 
               src="/logo 2.png" 
               alt="Touchwood Logo" 
               width={40} 
               height={40}
-              className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+              className="scale-[2.2] w-8 h-8 sm:w-10 sm:h-10 object-contain"
             />
             <span className='text-white text-lg sm:text-xl font-semibold'>
               Touchwood

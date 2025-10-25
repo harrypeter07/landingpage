@@ -8,6 +8,7 @@ import { ProductSection } from '@/components/ProductSection'
 import { PromotionBanner } from '@/components/PromotionBanner'
 import { InteriorDesignSection } from '@/components/InteriorDesignSection'
 import { TestimonialsSection } from '@/components/TestimonialsSection'
+import { FollowUsSection } from '@/components/FollowUsSection'
 import { ContactSection } from '@/components/ContactSection'
 import { Footer } from '@/components/Footer'
 
@@ -30,6 +31,7 @@ export default function Home() {
       <PromotionBanner />
       <InteriorDesignSection />
       <TestimonialsSection />
+      <FollowUsSection />
       <ContactSection />
       <Footer />
     </div>

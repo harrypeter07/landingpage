@@ -14,9 +14,9 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="relative bg-gray-100 py-20 overflow-hidden">
-      <div className="text-center mb-4  px-4">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+    <section className="relative bg-gray-200 py-20 overflow-hidden">
+      <div className="text-center mb-4  px-4  mt-60">
+        <h2 className="text-4xl sm:text-6xl font-bold text-gray-900">
           What our <span className="text-blue-400">Clients Say</span>
         </h2>
         <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
