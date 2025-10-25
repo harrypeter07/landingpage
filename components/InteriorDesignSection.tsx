@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import Image from "next/image";
 
 export function InteriorDesignSection() {
   const features = [
@@ -30,26 +31,44 @@ export function InteriorDesignSection() {
             <div className='grid grid-cols-2 gap-3 sm:gap-4'>
               <div className='space-y-3 sm:space-y-4'>
                 <div className='bg-gradient-to-br from-amber-300 to-amber-400 rounded-lg aspect-square relative overflow-hidden'>
-                  <div className='absolute inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-8'>
-                    <div className='w-full h-full bg-orange-800/20 rounded-lg'></div>
-                  </div>
+                  <Image
+                    src="/gridsection/img-grid-1 1.png"
+                    alt="Interior Design 1"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
 
               <div className='space-y-3 sm:space-y-4 pt-8 sm:pt-12'>
                 <div className='bg-gray-100 rounded-lg aspect-[3/4] relative overflow-hidden'>
-                  <div className='absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300'></div>
+                  <Image
+                    src="/gridsection/img-grid-2 1.png"
+                    alt="Interior Design 2"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className='bg-blue-200 rounded-lg aspect-square relative overflow-hidden'>
-                  <div className='absolute inset-0 bg-gradient-to-br from-blue-200 to-blue-300'></div>
+                  <Image
+                    src="/gridsection/img-grid-3 1.png"
+                    alt="Interior Design 3"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
 
+            {/* Sofa Image - Absolutely positioned for easy repositioning */}
             <div className='absolute -right-4 sm:-right-8 top-1/2 transform -translate-y-1/2 w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 z-10'>
               <div className='relative w-full h-full'>
-                <div className='absolute inset-0 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full transform rotate-12'></div>
-                <div className='absolute inset-3 sm:inset-4 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full'></div>
+                <Image
+                  src="/gridsection/sofa 1.png"
+                  alt="Sofa"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
           </div>
