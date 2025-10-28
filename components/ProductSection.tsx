@@ -21,7 +21,7 @@ export function ProductSection({ selectedCategory }: ProductSectionProps) {
       { 
         name: "Armless Solid Dining Chair", 
         price: "₹1,250.00", 
-        image: "https://images.unsplash.com/photo-1576012414854-e6c6246e59ee?w=800&h=800&fit=crop" 
+        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop" 
       },
       { 
         name: "Elle Decor Roux Arm Chair", 
@@ -36,7 +36,7 @@ export function ProductSection({ selectedCategory }: ProductSectionProps) {
       { 
         name: "Accent Chair", 
         price: "₹1,800.00", 
-        image: "https://images.unsplash.com/photo-1532534983-a8c062a3da2d?w=800&h=800&fit=crop" 
+        image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=800&fit=crop" 
       },
     ],
     Sofa: [
