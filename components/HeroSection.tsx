@@ -64,14 +64,14 @@ export function HeroSection() {
         <div className='flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-3 sm:mt-8 md:mt-12 mb-4 sm:mb-12 md:mb-16 px-4'>
           <Button
             size='sm'
-            className='bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-8 py-2 sm:py-6 text-xs sm:text-lg font-semibold rounded-md transition-all w-full sm:w-auto'
+            className='bg-blue-600 hover:bg-blue-700 text-white px-2 max-sm:px-8 py-1.5 sm:py-6 text-xs sm:text-lg font-semibold rounded-md transition-all w-full max-sm:w-auto'
           >
             Shop Now →
           </Button>
           <Button
             size='sm'
             variant='outline'
-            className='border-t-2 border-white text-white bg-slate-800 hover:bg-white hover:text-slate-800 px-3 sm:px-8 py-2 sm:py-6 text-xs sm:text-lg font-semibold rounded-md transition-all w-full sm:w-auto'
+            className='border-t-2 border-white text-white bg-slate-800 hover:bg-white hover:text-slate-800 px-2 max-sm:px-8 py-1.5 sm:py-6 text-xs sm:text-lg font-semibold rounded-md transition-all w-full max-sm:w-auto'
           >
             Contact Us
           </Button>

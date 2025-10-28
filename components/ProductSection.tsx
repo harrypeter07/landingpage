@@ -18,116 +18,117 @@ export function ProductSection({ selectedCategory }: ProductSectionProps) {
   // Product data organized by category
   const productsByCategory = {
     Chair: [
-      {
-        name: "Armless Solid Dining Chair",
-        price: "₹1,250.00",
-        image: "https://unsplash.com/photos/brown-armless-chair-Q9ZTQ_Hh4Ew/download?force=true&w=800",
-      }, // Brown armless chair[web:14]
-      {
-        name: "Elle Decor Roux Arm Chair",
-        price: "₹1,250.00",
-        image: "https://unsplash.com/photos/white-wooden-armchair-9489sFfgk4c/download?force=true&w=800",
-      }, // White wooden armchair[web:7]
-      {
-        name: "Modern Office Chair",
-        price: "₹2,500.00",
-        image: "https://unsplash.com/photos/a-modern-office-chair-is-featured-in-green-YrXPGShView/download?force=true&w=800",
-      }, // Modern office chair[web:8]
-      {
-        name: "Accent Chair",
-        price: "₹1,800.00",
-        image: "https://unsplash.com/photos/copper-wired-accent-chair-L0BaowhFe4c/download?force=true&w=800",
-      }, // Copper wired accent chair[web:17]
+      { 
+        name: "Armless Solid Dining Chair", 
+        price: "₹1,250.00", 
+        image: "https://images.unsplash.com/photo-1576012414854-e6c6246e59ee?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Elle Decor Roux Arm Chair", 
+        price: "₹1,250.00", 
+        image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Modern Office Chair", 
+        price: "₹2,500.00", 
+        image: "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Accent Chair", 
+        price: "₹1,800.00", 
+        image: "https://images.unsplash.com/photo-1532534983-a8c062a3da2d?w=800&h=800&fit=crop" 
+      },
     ],
     Sofa: [
-      {
-        name: "Velvet Midnight Natural Sofa",
-        price: "₹5,000.00",
-        image: "https://unsplash.com/photos/orange-velvet-couch-with-a-tufted-design-7qmvjq3cGrA/download?force=true&w=800",
-      }, // Orange velvet couch[web:10]
-      {
-        name: "Modern 3-Seater Sofa",
-        price: "₹4,500.00",
-        image: "https://unsplash.com/photos/beige-3-seat-sofa-near-the-window-Wv65tpVIdDg/download?force=true&w=800",
-      }, // Beige 3-seat sofa[web:19]
-      {
-        name: "Sectional Sofa Set",
-        price: "₹6,500.00",
-        image: "https://unsplash.com/photos/a-cozy-living-room-with-a-brown-sectional-sofa-FI4ZN6aaWQ0/download?force=true&w=800",
-      }, // Brown sectional sofa[web:12]
-      {
-        name: "L-Shaped Sofa",
-        price: "₹5,500.00",
-        image: "https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-fire-place-Alp8v3dpGh0/download?force=true&w=800",
-      }, // Living room with L-shaped sofa[web:20]
+      { 
+        name: "Velvet Midnight Natural Sofa", 
+        price: "₹5,000.00", 
+        image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Modern 3-Seater Sofa", 
+        price: "₹4,500.00", 
+        image: "https://images.unsplash.com/photo-1550226891-ef816aed4a98?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Sectional Sofa Set", 
+        price: "₹6,500.00", 
+        image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "L-Shaped Sofa", 
+        price: "₹5,500.00", 
+        image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=800&fit=crop" 
+      },
     ],
     Table: [
-      {
-        name: "Solid Wood Dining Table",
-        price: "₹3,200.00",
-        image: "https://unsplash.com/photos/photo-1533928298208-27ff66555d8d/download?force=true&w=800",
-      }, // Wood dining table[web:1]
-      {
-        name: "Modern Coffee Table",
-        price: "₹2,100.00",
-        image: "https://unsplash.com/photos/photo-1532372320572-cda25653a26d/download?force=true&w=800",
-      }, // Coffee table [web:1]
-      {
-        name: "Office Desk",
-        price: "₹2,800.00",
-        image: "https://unsplash.com/photos/photo-1524758631624-e2822e304c36/download?force=true&w=800",
-      }, // Office desk [web:1]
-      {
-        name: "Side Table",
-        price: "₹1,500.00",
-        image: "https://unsplash.com/photos/photo-1567538096630-e0c55bd6374c/download?force=true&w=800",
-      }, // Side table [web:1]
+      { 
+        name: "Solid Wood Dining Table", 
+        price: "₹3,200.00", 
+        image: "https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Modern Coffee Table", 
+        price: "₹2,100.00", 
+        image: "https://images.unsplash.com/photo-1550254478-ead40cc54513?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Office Desk", 
+        price: "₹2,800.00", 
+        image: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Side Table", 
+        price: "₹1,500.00", 
+        image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=800&h=800&fit=crop" 
+      },
     ],
     Bed: [
-      {
-        name: "King Size Bed Frame",
-        price: "₹4,500.00",
-        image: "https://unsplash.com/photos/photo-1519710164239-da123dc03ef4/download?force=true&w=800",
-      }, // King size bed [web:1]
-      {
-        name: "Queen Size Bed",
-        price: "₹3,800.00",
-        image: "https://unsplash.com/photos/photo-1506744038136-46273834b3fb/download?force=true&w=800",
-      }, // Queen bed [web:1]
-      {
-        name: "Single Bed",
-        price: "₹2,200.00",
-        image: "https://unsplash.com/photos/photo-1522771739844-6a9f6d5f14af/download?force=true&w=800",
-      }, // Single bed [web:1]
-      {
-        name: "Bunk Bed",
-        price: "₹3,500.00",
-        image: "https://unsplash.com/photos/photo-1519710164239-da123dc03ef4/download?force=true&w=800",
-      }, // Bunk bed [web:1]
+      { 
+        name: "King Size Bed Frame", 
+        price: "₹4,500.00", 
+        image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Queen Size Bed", 
+        price: "₹3,800.00", 
+        image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Single Bed", 
+        price: "₹2,200.00", 
+        image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Bunk Bed", 
+        price: "₹3,500.00", 
+        image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&h=800&fit=crop" 
+      },
     ],
     Lamp: [
-      {
-        name: "Modern Table Lamp",
-        price: "₹1,200.00",
-        image: "https://unsplash.com/photos/photo-1507003211169-0a1dd7228f2d/download?force=true&w=800",
-      }, // Modern table lamp [web:1]
-      {
-        name: "Floor Lamp",
-        price: "₹1,800.00",
-        image: "https://unsplash.com/photos/photo-1519710164239-da123dc03ef4/download?force=true&w=800",
-      }, // Floor lamp [web:1]
-      {
-        name: "Pendant Light",
-        price: "₹2,500.00",
-        image: "https://unsplash.com/photos/photo-1519125323398-675f0ddb6308/download?force=true&w=800",
-      }, // Pendant light [web:1]
-      {
-        name: "Desk Lamp",
-        price: "₹800.00",
-        image: "https://unsplash.com/photos/photo-1464983953574-0892a716854b/download?force=true&w=800",
-      }, // Desk lamp [web:1]
+      { 
+        name: "Modern Table Lamp", 
+        price: "₹1,200.00", 
+        image: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Floor Lamp", 
+        price: "₹1,800.00", 
+        image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Pendant Light", 
+        price: "₹2,500.00", 
+        image: "https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?w=800&h=800&fit=crop" 
+      },
+      { 
+        name: "Desk Lamp", 
+        price: "₹800.00", 
+        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop" 
+      },
     ],
   };
+  
   
 
   const latestProducts: Product[] = [
