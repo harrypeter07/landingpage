@@ -58,7 +58,7 @@ export function ProductSection({ selectedCategory }: ProductSectionProps) {
       { 
         name: "L-Shaped Sofa", 
         price: "₹5,500.00", 
-        image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=800&fit=crop" 
+        image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=800&fit=crop" 
       },
     ],
     Table: [
