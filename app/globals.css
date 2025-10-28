@@ -90,22 +90,26 @@
 .hero-carousel {
   width: 100%;
   position: relative;
+  height: 100%;
 }
 
 /* Hero background images - smooth transitions */
 .hero-carousel-bg {
   transition: opacity 2s ease !important;
+  width: 100%;
+  height: 100%;
 }
 
 /* Ensure images don't overflow on mobile and fix cropping */
 @media (max-width: 640px) {
   .hero-carousel {
-    min-height: 60vh !important;
+    min-height: 50vh !important;
   }
   
   .hero-carousel-bg {
-    background-size: 120% auto !important;
-    background-position: center top !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    min-height: 100% !important;
   }
 }
 
@@ -116,17 +120,31 @@
   }
   
   .hero-carousel-bg {
-    background-size: 110% auto !important;
+    background-size: cover !important;
+    min-height: 100% !important;
   }
 }
 
 /* For desktop */
 @media (min-width: 769px) {
   .hero-carousel {
+    min-height: 85vh;
+  }
+  
+  .hero-carousel-bg {
+    background-size: cover !important;
+    min-height: 100% !important;
+  }
+}
+
+/* For large desktop */
+@media (min-width: 1024px) {
+  .hero-carousel {
     min-height: 100vh;
   }
   
   .hero-carousel-bg {
     background-size: cover !important;
+    min-height: 100% !important;
   }
 }

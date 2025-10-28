@@ -11,17 +11,24 @@ export function HeroSection() {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
+    
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval);
-  }, [heroImages.length]);
+  }, [heroImages.length, isPaused]);
 
   return (
-    <section className='hero-carousel relative min-h-[60vh] sm:min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden'>
+    <section 
+      className='hero-carousel relative min-h-[50vh] sm:min-h-[70vh] md:min-h-[85vh] lg:min-h-screen flex items-center justify-center overflow-hidden'
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Background images with fade effect */}
       {heroImages.map((image, index) => (
         <div
@@ -45,7 +52,7 @@ export function HeroSection() {
       {/* Dotted pattern overlay */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAtNGgydi0yaC0ydjJ6bS0yIDJ2LTJoLTJ2Mmgyem0wLTR2Mmgydi0yaC0yem0tMiAydi0yaC0ydjJoMnptMC00aDJ2LTJoLTJ2MnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50 z-3"></div>
 
-      <div className='container mx-auto px-4 sm:px-6 relative z-10 text-center pt-12 sm:pt-20 pb-12'>
+      <div className='container mx-auto px-4 sm:px-6 relative z-10 text-center pt-8 sm:pt-16 md:pt-20 pb-8 sm:pb-12'>
         <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-7xl mx-auto font-bold text-white mb-6 leading-tight px-4'>
           Crafting <span className='text-blue-400'>Comfort</span>{" "}
           <span className='text-white'>&</span>{" "}
@@ -54,7 +61,7 @@ export function HeroSection() {
           <span className='text-white'>with Every Piece</span>
         </h1>
 
-        <div className='flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-12 mb-12 sm:mb-16 px-4'>
+        <div className='flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8 md:mt-12 mb-8 sm:mb-12 md:mb-16 px-4'>
           <Button
             size='lg'
             className='bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg font-semibold rounded-md transition-all w-full sm:w-auto'
