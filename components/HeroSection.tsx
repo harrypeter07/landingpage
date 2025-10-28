@@ -32,6 +32,7 @@ export function HeroSection() {
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            backgroundAttachment: "scroll",
             opacity: index === currentImageIndex ? 1 : 0,
             zIndex: index === currentImageIndex ? 1 : 0
           }}
