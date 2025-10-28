@@ -24,28 +24,28 @@ export function ProductSection({ selectedCategory }: ProductSectionProps) {
       { name: "Accent Chair", price: "₹1,800.00", image: "/products/61d212246144d8255ace27d234fb297f-removebg-preview 1.png" },
     ],
     Sofa: [
-      { name: "Velvet Midnight Natural Sofa", price: "₹5,000.00", image: "/products/8d2e32ba9e3def94b92308bcf1545a87-removebg-preview 1.png" },
-      { name: "Modern 3-Seater Sofa", price: "₹4,500.00", image: "/products/a9ad41c23c7abd44289d04ebc01374ca-removebg-preview 1.png" },
-      { name: "Sectional Sofa Set", price: "₹6,500.00", image: "/products/f8d0dcd7fd9e1fc7fb1990b5a44db933-removebg-preview 1.png" },
-      { name: "L-Shaped Sofa", price: "₹5,500.00", image: "/products/blue.png" },
+      { name: "Velvet Midnight Natural Sofa", price: "₹5,000.00", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=800&fit=crop" },
+      { name: "Modern 3-Seater Sofa", price: "₹4,500.00", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop" },
+      { name: "Sectional Sofa Set", price: "₹6,500.00", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=800&fit=crop" },
+      { name: "L-Shaped Sofa", price: "₹5,500.00", image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=800&fit=crop" },
     ],
     Table: [
-      { name: "Solid Wood Dining Table", price: "₹3,200.00", image: "/products/Chair 1 1.png" },
-      { name: "Modern Coffee Table", price: "₹2,100.00", image: "/products/Chair 2 1.png" },
-      { name: "Office Desk", price: "₹2,800.00", image: "/products/5b801fa33bc9927e3a61242146b13fb1-removebg-preview 1.png" },
-      { name: "Side Table", price: "₹1,500.00", image: "/products/61d212246144d8255ace27d234fb297f-removebg-preview 1.png" },
+      { name: "Solid Wood Dining Table", price: "₹3,200.00", image: "https://images.unsplash.com/photo-1533928298208-27ff66555d8d?w=800&h=800&fit=crop" },
+      { name: "Modern Coffee Table", price: "₹2,100.00", image: "https://images.unsplash.com/photo-1532372320572-cda25653a26d?w=800&h=800&fit=crop" },
+      { name: "Office Desk", price: "₹2,800.00", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop" },
+      { name: "Side Table", price: "₹1,500.00", image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&h=800&fit=crop" },
     ],
     Bed: [
-      { name: "King Size Bed Frame", price: "₹4,500.00", image: "/products/8d2e32ba9e3def94b92308bcf1545a87-removebg-preview 1.png" },
-      { name: "Queen Size Bed", price: "₹3,800.00", image: "/products/a9ad41c23c7abd44289d04ebc01374ca-removebg-preview 1.png" },
-      { name: "Single Bed", price: "₹2,200.00", image: "/products/f8d0dcd7fd9e1fc7fb1990b5a44db933-removebg-preview 1.png" },
-      { name: "Bunk Bed", price: "₹3,500.00", image: "/products/blue.png" },
+      { name: "King Size Bed Frame", price: "₹4,500.00", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=800&fit=crop" },
+      { name: "Queen Size Bed", price: "₹3,800.00", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop" },
+      { name: "Single Bed", price: "₹2,200.00", image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=800&fit=crop" },
+      { name: "Bunk Bed", price: "₹3,500.00", image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=800&fit=crop" },
     ],
     Lamp: [
-      { name: "Modern Table Lamp", price: "₹1,200.00", image: "/products/Chair 1 1.png" },
-      { name: "Floor Lamp", price: "₹1,800.00", image: "/products/Chair 2 1.png" },
-      { name: "Pendant Light", price: "₹2,500.00", image: "/products/5b801fa33bc9927e3a61242146b13fb1-removebg-preview 1.png" },
-      { name: "Desk Lamp", price: "₹800.00", image: "/products/61d212246144d8255ace27d234fb297f-removebg-preview 1.png" },
+      { name: "Modern Table Lamp", price: "₹1,200.00", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop" },
+      { name: "Floor Lamp", price: "₹1,800.00", image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&h=800&fit=crop" },
+      { name: "Pendant Light", price: "₹2,500.00", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=800&fit=crop" },
+      { name: "Desk Lamp", price: "₹800.00", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop" },
     ],
   };
 
@@ -53,11 +53,11 @@ export function ProductSection({ selectedCategory }: ProductSectionProps) {
     {
       name: "Velvet Midnight Natural Sofa",
       price: "₹5,000.00",
-      image: "/products/8d2e32ba9e3def94b92308bcf1545a87-removebg-preview 1.png",
+      image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=800&fit=crop",
     },
-    { name: "Modern Furniture", price: "₹5,000.00", image: "/products/a9ad41c23c7abd44289d04ebc01374ca-removebg-preview 1.png" },
-    { name: "Modern Furniture Set", price: "₹5,000.00", image: "/products/f8d0dcd7fd9e1fc7fb1990b5a44db933-removebg-preview 1.png" },
-    { name: "Furniture Sofa Set", price: "₹5,000.00", image: "/products/blue.png" },
+    { name: "Modern Furniture", price: "₹5,000.00", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop" },
+    { name: "Modern Furniture Set", price: "₹5,000.00", image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=800&fit=crop" },
+    { name: "Furniture Sofa Set", price: "₹5,000.00", image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=800&fit=crop" },
   ];
 
   // Get products for the selected category

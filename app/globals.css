@@ -87,10 +87,32 @@
   font-style: normal;
 }
 
-.hero-bg {
-  background-image: url('/hero-bg.png');
-  background-size: cover;
-  background-position: center;
-  /* filter: brightness(0.8); */
-  background-repeat: no-repeat;
+.hero-carousel {
+  width: 100%;
+  position: relative;
+}
+
+/* Ensure images don't overflow on mobile */
+@media (max-width: 640px) {
+  .hero-carousel {
+    min-height: 60vh !important;
+  }
+  
+  .hero-carousel [style*="backgroundImage"] {
+    background-attachment: scroll;
+  }
+}
+
+/* For tablets */
+@media (min-width: 641px) and (max-width: 768px) {
+  .hero-carousel {
+    min-height: 70vh;
+  }
+}
+
+/* For desktop */
+@media (min-width: 769px) {
+  .hero-carousel {
+    min-height: 100vh;
+  }
 }
