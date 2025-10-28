@@ -103,7 +103,7 @@
 /* Ensure images don't overflow on mobile and fix cropping */
 @media (max-width: 640px) {
   .hero-carousel {
-    min-height: 50vh !important;
+    min-height: 35vh !important;
   }
   
   .hero-carousel-bg {
