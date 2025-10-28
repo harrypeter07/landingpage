@@ -32,7 +32,7 @@ export function InteriorDesignSection() {
             <div className="space-y-[1vw] translate-y-[2vw] sm:translate-y-[3vw]">
               <div className="relative aspect-[4/6] rounded-l-[1vw] overflow-hidden scale-[1.05] w-[26vw] sm:w-[40vw] md:w-[32vw] mx-auto">
                 <Image
-                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=900&fit=crop"
+                  src="/gridsection/img-grid-1 1.png"
                   alt="Interior 1"
                   fill
                   className="object-cover"
@@ -45,7 +45,7 @@ export function InteriorDesignSection() {
               {/* Second grid image */}
               <div className="relative aspect-square rounded-xl overflow-hidden w-[10vw] sm:w-[42vw] md:w-[16vw] lg:w-[14vw] mx-auto lg:mr-[-5vw]">
                 <Image
-                  src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&h=600&fit=crop"
+                  src="/gridsection/img-grid-2 1.png"
                   alt="Interior 2"
                   fill
                   className="object-cover"
@@ -72,7 +72,7 @@ export function InteriorDesignSection() {
                 "
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=800&fit=crop"
+                  src="/gridsection/img-grid-3 1.png"
                   alt="Interior 3"
                   fill
                   className="object-cover"
@@ -122,7 +122,7 @@ export function InteriorDesignSection() {
             xl:bottom-[-35vw] xl:right-[1vw] xl:w-[35vw] xl:h-[35vw]
             z-[100]">
             <Image
-              src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&h=600&fit=crop"
+              src="/gridsection/sofa 1.png"
               alt="Sofa"
               fill
               className="object-contain"
