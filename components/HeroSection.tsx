@@ -26,11 +26,11 @@ export function HeroSection() {
       {heroImages.map((image, index) => (
         <div
           key={index}
-          className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
+          className="hero-carousel-bg absolute inset-0 transition-opacity duration-[2000ms] ease"
           style={{
             backgroundImage: `url(${image})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center center",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "scroll",
             opacity: index === currentImageIndex ? 1 : 0,

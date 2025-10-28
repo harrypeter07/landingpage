@@ -92,14 +92,20 @@
   position: relative;
 }
 
-/* Ensure images don't overflow on mobile */
+/* Hero background images - smooth transitions */
+.hero-carousel-bg {
+  transition: opacity 2s ease !important;
+}
+
+/* Ensure images don't overflow on mobile and fix cropping */
 @media (max-width: 640px) {
   .hero-carousel {
     min-height: 60vh !important;
   }
   
-  .hero-carousel [style*="backgroundImage"] {
-    background-attachment: scroll;
+  .hero-carousel-bg {
+    background-size: 120% auto !important;
+    background-position: center top !important;
   }
 }
 
@@ -108,11 +114,19 @@
   .hero-carousel {
     min-height: 70vh;
   }
+  
+  .hero-carousel-bg {
+    background-size: 110% auto !important;
+  }
 }
 
 /* For desktop */
 @media (min-width: 769px) {
   .hero-carousel {
     min-height: 100vh;
+  }
+  
+  .hero-carousel-bg {
+    background-size: cover !important;
   }
 }
